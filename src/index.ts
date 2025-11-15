@@ -3,7 +3,7 @@ import { Colorizer } from './colorizer';
 
 const typeScriptExtensionId = 'vscode.typescript-language-features';
 const pluginId = 'typescript-lit-html-plugin';
-const configurationSection = 'lit-html';
+const configurationSection = 'no-html';
 
 interface SynchronizedConfiguration {
 	tags?: ReadonlyArray<string>;

@@ -7,7 +7,7 @@
  * results from the no-html VS Code extension to JSON files.
  */
 
-const { ColorizerCli } = require('./cli');
+const { ColorizerCli } = require('./out/cli');
 
 // Run the CLI
 const cli = new ColorizerCli(process.argv.slice(2));
