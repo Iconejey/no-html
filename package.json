@@ -38,6 +38,28 @@
 	],
 	"main": "./out/index.js",
 	"contributes": {
+		"commands": [
+			{
+				"command": "no-html.colorizeCurrentFile",
+				"title": "Export Colorization (Current File)",
+				"category": "No HTML"
+			},
+			{
+				"command": "no-html.colorizeFixtures",
+				"title": "Export Colorization (Test Fixtures)",
+				"category": "No HTML"
+			},
+			{
+				"command": "no-html.colorizeSelectedFiles",
+				"title": "Export Colorization (Selected Files)",
+				"category": "No HTML"
+			},
+			{
+				"command": "no-html.compareColorization",
+				"title": "Compare Colorization Results",
+				"category": "No HTML"
+			}
+		],
 		"configuration": [
 			{
 				"id": "no-html",
@@ -52,13 +74,37 @@
 						},
 						"default": [
 							"html",
-							"raw"
+							"raw",
+							"render"
 						]
 					},
 					"no-html.format.enabled": {
 						"type": "boolean",
 						"description": "Enable/disable formatting of html template strings.",
 						"default": true
+					},
+					"no-html.colorization.outputFormat": {
+						"type": "string",
+						"enum": [
+							"json",
+							"pretty"
+						],
+						"default": "pretty",
+						"description": "Output format for colorization JSON files."
+					},
+					"no-html.colorization.includeThemes": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						},
+						"default": [
+							"dark_plus",
+							"light_plus",
+							"dark_vs",
+							"light_vs",
+							"hc_black"
+						],
+						"description": "List of themes to include in colorization output."
 					}
 				}
 			}
