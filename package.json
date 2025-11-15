@@ -195,7 +195,7 @@
 		"compile": "tsc -p ./",
 		"watch": "tsc -w -p ./",
 		"test": "node ./out/test",
-		"reinstall": "npm run compile && vsce package && code --install-extension no-html-1.11.1.vsix"
+		"reinstall": "npm i && npm run compile && vsce package && code --install-extension no-html-1.11.1.vsix"
 	},
 	"dependencies": {
 		"typescript-lit-html-plugin": "0.9.0"
