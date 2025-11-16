@@ -1,0 +1,15 @@
+{
+	"fileTypes": [],
+	"injectionSelector": "L:source.css.scss",
+	"patterns": [
+		{
+			"match": "&",
+			"name": "entity.name.type.class"
+		},
+		{
+			"match": ":[a-zA-Z-][a-zA-Z0-9-]*(?=\\s*\\{)",
+			"name": "entity.other.attribute-name.pseudo-class.css"
+		}
+	],
+	"scopeName": "inline.no-html.scss.ampersand.simple"
+}

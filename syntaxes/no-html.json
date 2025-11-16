@@ -81,6 +81,52 @@
 					"include": "text.html.basic"
 				}
 			]
+		},
+		{
+			"name": "string.js.taggedTemplate",
+			"contentName": "meta.embedded.block.css source.css.scss",
+			"begin": "(?x)([\\w$_]+(?:\\.[\\w$_]+)*(?:\\([^)]*\\))?(?:\\[[^\\]]*\\])?)\\s*(\\.\\s*)(style)\\s*(\\.\\s*)([\\w$_]+)\\s*(`)",
+			"beginCaptures": {
+				"1": {
+					"patterns": [
+						{
+							"include": "source.js"
+						}
+					]
+				},
+				"2": {
+					"name": "punctuation.accessor.js"
+				},
+				"3": {
+					"name": "entity.name.function.tagged-template.js"
+				},
+				"4": {
+					"name": "punctuation.accessor.js"
+				},
+				"5": {
+					"name": "entity.name.type.class"
+				},
+				"6": {
+					"name": "punctuation.definition.string.template.begin.js"
+				}
+			},
+			"end": "(`)",
+			"endCaptures": {
+				"0": {
+					"name": "string.js"
+				},
+				"1": {
+					"name": "punctuation.definition.string.template.end.js"
+				}
+			},
+			"patterns": [
+				{
+					"include": "source.ts#template-substitution-element"
+				},
+				{
+					"include": "source.css"
+				}
+			]
 		}
 	],
 	"scopeName": "inline.no-html"
